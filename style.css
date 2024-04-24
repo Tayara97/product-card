@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  /* primary color  */
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  /* secondary color  */
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+  --font-one: "Montserrat";
+  --font-two: "Fraunces";
+}
+body {
+  background-color: var(--Cream);
+}
+p {
+  font-size: 15px;
+}
+.product-box {
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto;
+  width: 350px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: var(--White);
+}
+@media (min-width: 768px) {
+  .product-box {
+    flex-direction: row;
+    width: 600px;
+  }
+}
+.product-box .images {
+  flex-basis: 50%;
+}
+.product-box .images .mobile-image {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .product-box .images .mobile-image {
+    display: none;
+  }
+}
+.product-box .images .desktop-image {
+  display: none;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .product-box .images .desktop-image {
+    display: block;
+  }
+}
+.product-box .info {
+  margin: 10px 20px;
+  flex-basis: 50%;
+}
+.product-box .info .product-type {
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  color: var(--Dark-grayish-blue);
+  font-size: 15px;
+  font-family: var(--font-one);
+}
+.product-box .info .title {
+  color: var(--Very-dark-blue);
+  font-family: var(--font-two);
+}
+.product-box .info p {
+  font-family: var(--font-one);
+  margin: 10px 0;
+  color: var(--Dark-grayish-blue);
+  font-weight: 500;
+  line-height: 2;
+}
+.product-box .info .after-sale {
+  color: var(--Dark-cyan);
+  font-size: 30px;
+  font-family: var(--font-two);
+  font-weight: 700;
+}
+.product-box .info .before-sale {
+  font-size: 13px;
+  color: var(--Dark-grayish-blue);
+  position: relative;
+  top: -5px;
+  left: 10px;
+}
+.product-box .info .before-sale::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--Dark-grayish-blue);
+  bottom: 15px;
+  left: 0;
+}
+.product-box .info .btn {
+  display: block;
+  background-color: var(--Dark-cyan);
+  color: var(--White);
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  font-family: var(--font-two);
+  cursor: pointer;
+  margin: 25px 0 0;
+}
+@media (min-width: 768px) {
+  .product-box .info .btn:hover {
+    background-color: hsl(158, 35%, 29%);
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
